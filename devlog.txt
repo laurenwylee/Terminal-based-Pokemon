@@ -1,0 +1,174 @@
+Crabby Chips
+Diana Akhmedova
+Lauren Lee
+pd 8
+---------------------
+Pokemon Shining Pearl
+Pokemon Shining Pearl is a roleplaying game that allows players to engage in battle, catch Pokemon, and beat gyms.
+All Pokemon, characters, and game descriptions in the game are based on the Nintendo Pokemon Shining Pearl game.
+
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Creating a battle method that allows the user to switch to their next Pokemon when their current Pokemon has fainted required a lot of trials/testing with loops and if statements.
+- Creating a nurse method that is versatile for all uses of it.
+- There was a bug that made users have to beat a gym more than once, although not in all instances.
+      - We found out that it was because instead of directly returning false/true in our walk method, we were calling another walk method that was not being returned in the walk method that was called in the while loop in our main method.
+      - We had to change this to fix the bug.
+      - Took 4+ hours to figure out.
+- Creating separate gyms that can be accessed based on regions.
+- Making sure to account for invalid inputs.
+
+
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Whenever we copy our latest working version into a v# directory, we get some variation of this message:
+      warning: LF will be replaced by CRLF in v6/Human.java.
+      warning: LF will be replaced by CRLF in v6/Player.java.
+      The file will have its original line endings in your working directory.
+          - What does this mean?
+- How can we create a save file?
+- How do we make music work? Specifically the .close() method?
+- Unicode colors do not work on some Windows terminals.
+- How do we implement music without having it take up a lot of space?
+- How do we create and implement a save file?
+
+
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- You can implement and extend a class at the same time, extend must go before implements.
+- You can create a wait() method to cause the current thread to wait, we used this to delay print statements.
+- Unicode coloring can be changed within the same String.
+- Music can be implemented and played in the terminal.
+
+
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 1 gym method => multiple gym methods.
+- 3 nurse methods that returned different things => 1 nurse method that returned void.
+- Allowing user to choose to catch Pokemon instead of automatically catching.
+- Playing the "do you want a berry?" option in the moves of the Pokemon instead of in the battle method where the loops made it very complicated.
+- Creating a different move method for opponents and users to account for certain differences when the opponent attacks vs us.
+
+
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+tales of wisdom gained...
+||||||||||||||||||||||||||||||||||||||||||
+- We have to make sure if we are calling a method in another method, that we can trace it. One of our problems was because we were not tracing how all the parts were moving, we missed important bugs.
+- Create helper methods before the bigger methods.
+- Have a clear idea of how the game should function first to make making helper methods easier.
+- If helper methods are not created first, you cannot incrementally code because the bigger method you are coding will rely on you making a ton of other methods.
+
+
+
+ ______   ______   __   __   __       ______   _______
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \
+    \____/_/ \_____\/ \___/_(   \_____\/ \_____\/ \_____\/
+==============================================================
+
+
+2022-1-13
+--------------------------------------------------------------
+Diana Akhmedova :: Created CrabbyChips repo.
+                   Added devlog.txt and propro.pdf.
+                   Updated devlog.txt.
+
+Lauren Lee :: Added v0 and Woo.java.
+              Created resources (includes magpie, v3 of YoRPG, TerminallyIll.java).
+==============================================================
+
+
+2022-1-14
+--------------------------------------------------------------
+Diana Akhmedova :: Created .java files for Pokemon, Human, and Player.
+                   Created .java files for Human and Pokemon subclasses.
+
+Lauren Lee :: Created UML Diagrams for Pokemon, Human, and Player.
+==============================================================
+
+
+2022-1-17
+--------------------------------------------------------------
+Diana Akhmedova :: Updated Fire.java and Pokemon.java with instance variables and methods.
+
+Lauren Lee :: Updated Pokemon.java, Human.java, and Player.java with instance variables and methods.
+==============================================================
+
+
+2022-1-18
+--------------------------------------------------------------
+Diana Akhmedova :: Updated Fire.java, Water.java, Grass.java move() method and instance variables.
+                   Updated Woo.java with displaying and choosing starter Pokemon.
+
+Lauren Lee :: Updated Woo.java with main methods and added more storyline.
+              Updated Fire.java move() method.
+==============================================================
+
+
+2022-1-19
+--------------------------------------------------------------
+Diana Akhmedova :: Updated Pokemon.java, Types.java, Water.java, Fire.java, and Grass.java so that Pokemon.java had the overrode methods of the type files.
+                   Finished Woo.java so that it could compile cause Lauren's hands were cramping from the enormous while/if statements.
+
+Lauren Lee :: Updated Woo.java to create walk(), goToNurse(), gym method, generateLvl(), generatePokemon(), generateType().
+==============================================================
+
+
+2022-1-20
+--------------------------------------------------------------
+Diana Akhmedova :: Added city.wav and battle.wav audio files.
+                   Forced multiple minions to try to break the code.
+                   Debugged all bugs found before going to the gym.
+
+Lauren Lee :: Augmented catchP() and lvlUp().
+              Created a more robust generatePokemon() method, deleted 400 lines of code, returns a Pokemon instead of a String.
+              Struggled with inheritance in the Dojo (thank you Sensei).
+              Came home and fixed the inheritance.
+              Added StdAudio.java and implemented music (still needs to be fixed).
+==============================================================
+
+
+2022-1-21
+--------------------------------------------------------------
+Diana Akhmedova :: Fixed catching Pokemon, worked on formatting.
+
+Lauren Lee :: Fixed gyms bugs, fixed defense shielding.
+==============================================================
+
+
+2022-1-22
+--------------------------------------------------------------
+Diana Akhmedova :: Worked on gym not incrementing and repeating.
+                   Worked on code and output formatting:
+                      - Fixed all spaces.
+                      - Added in more wait()'s.
+                      - Worked on Unicode coloring.
+                      - Tested music.
+
+Lauren Lee :: Coded in toString method for Pokemon and type advantages.
+              Fixed the nurse to be more efficient, fixed HP shielding.
+              Worked and fixed gym not incrementing and repeating.
+              Added prompt to ask if the player wants to catch a Pokemon.
+              Pokemon trainers give the player a Pokeball if you defeat them.
+==============================================================
+
+
+2022-1-23
+--------------------------------------------------------------
+Diana Akhmedova :: Finished all Unicode coloring and finished formatting, added v8.
+                   Added Unicode coloring to new Pokemon.
+                   Added a clear screen at the in gameSetup().
+                   Added show and hide cursor when the user gives input.
+                   Added music, but removed it due to large file size.
+
+Lauren Lee :: Coded in user catch prompt, fix minor bugs, updated README.
+              Added in more Pokemon, changed Rest in Water.java to Aqua Ring.
+              Cleaned up methods not used, updated UML diagram.
+==============================================================
