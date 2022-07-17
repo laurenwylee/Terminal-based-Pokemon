@@ -1,4 +1,4 @@
-# CrabbyChips
+# APCS First Semester Final Project: Terminal-based-Pokemon Game
  * Crabby Chips -- Lauren Lee & Diana Akhmedova
 
  * Project Description:
